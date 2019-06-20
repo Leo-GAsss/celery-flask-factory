@@ -7,7 +7,7 @@ A demo of using celery in Flask with
 
 1. Set up the virtualenv:
 
-    ```
+    ```bash
     pipenv install
     ```
     
@@ -17,16 +17,20 @@ A demo of using celery in Flask with
 
 3. Refer [here](https://www.rabbitmq.com/download.html) to install and start RabbitMQ.
 
-4. `flask initdb` to initialize the database.
+4. Initialize the database.
+
+    ```bash
+    flask initdb
+    ```
 
 5. Kickoff a celery worker:
 
-    ```bash
+    ```bash2
     celery -A app.celery worker
     ```
 
 6. Run flask sever:
 
-   ```bash
-   flask run
-   ```
+    ```bash
+    flask run
+    ```
