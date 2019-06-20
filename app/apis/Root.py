@@ -3,6 +3,6 @@ from app.apis import bp
 
 @bp.route("/")
 def hello():
-    from celery_worker import add_together
-    add_together.delay()
+    from app.task import add_record
+    add_record.delay()
     return "success", 200
